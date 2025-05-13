@@ -1,66 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loading announcements</title>
 
-		<style>
-			body {
-				font-family: sans-serif;
-			}
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Loading announcements</title>
 
-			.file-loader {
-				max-width: 400px;
-				margin: 2em 1em;
-				padding: 1.5em;
-				border: 1px solid #ccc;
-				border-radius: 10px;
-			}
+	<style>
+		body {
+			font-family: sans-serif;
+		}
 
-			.file-loader h1 {
-				font-size: 2em;
-				margin: 0 0 0.5em;
-			}
+		.file-loader {
+			max-width: 400px;
+			margin: 2em 1em;
+			padding: 1.5em;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+		}
 
-			.progress {
-				display: none;
-			}
+		.file-loader h1 {
+			font-size: 2em;
+			margin: 0 0 0.5em;
+		}
 
-			.progress.loading {
-				display: block;
-			}
+		.progress {
+			display: none;
+		}
 
-			.progressbar {
-				display: flex;
-				height: 5px;
-				width: 100%;
-				margin: 0.75em 0;
-				background-color: #e6e6e6;
-				border: 1px solid #242424;
-			}
+		.progress.loading {
+			display: block;
+		}
 
-			.indicator {
-				display: block;
-				background-color: #0f6cbd;
-			}
-		</style>
-  </head>
-  <body>
-    <main>
-			<div class="file-loader">
-				<h1>Download files</h1>
-        <p>lots-of-files.zip</p>
-        <button class="download">Download</button>
-        <div class="progress">
-            <div class="progressbar">
-							<span class="indicator"></span>
-						</div>
-						<span class="progress-text"></span>
+		.progressbar {
+			display: flex;
+			height: 5px;
+			width: 100%;
+			margin: 0.75em 0;
+			background-color: #e6e6e6;
+			border: 1px solid #242424;
+		}
+
+		.indicator {
+			display: block;
+			background-color: #0f6cbd;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<div class="file-loader">
+			<h1>Download files</h1>
+			<p>lots-of-files.zip</p>
+			<button class="download">Download</button>
+			<div class="progress">
+				<div class="progressbar">
+					<span class="indicator"></span>
 				</div>
-      </div>
-    </main>
+				<span class="progress-text"></span>
+			</div>
+		</div>
+	</main>
 
-    <script type="module" src="./script.js"></script>
-  </body>
+	<script type="module" src="./script.js"></script>
+</body>
+
 </html>

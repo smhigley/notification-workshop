@@ -9,6 +9,7 @@ const createError = (message, fieldEl) => {
 
 	const el = document.createElement('div');
 	el.classList.add('error');
+	el.setAttribute('role', 'alert');
 	el.id = errorId;
 	el.innerText = message;
 
@@ -38,7 +39,6 @@ const onBlur = (event) => {
 }
 
 const fields = document.querySelectorAll('input');
-console.log(fields);
 fields.forEach((field) => {
 	field.addEventListener('blur', onBlur);
 });
