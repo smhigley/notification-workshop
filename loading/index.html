@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading announcements</title>
+
+		<style>
+			.file-loader {
+				max-width: 400px;
+				margin: 2em 1em;
+				padding: 1.5em;
+				border: 1px solid #ccc;
+				border-radius: 10px;
+			}
+
+			.file-loader h1 {
+				font-size: 2em;
+				margin: 0 0 0.5em;
+			}
+
+			.progress {
+				display: none;
+			}
+
+			.progress.loading {
+				display: block;
+			}
+
+			.progressbar {
+				display: flex;
+				height: 5px;
+				width: 100%;
+				margin: 0.75em 0;
+				background-color: #e6e6e6;
+				border: 1px solid #242424;
+			}
+
+			.indicator {
+				display: block;
+				background-color: #0f6cbd;
+			}
+		</style>
+  </head>
+  <body>
+    <main>
+			<div class="file-loader">
+				<h1>Download files</h1>
+        <p>lots-of-files.zip</p>
+        <button class="download">Download</button>
+        <div class="progress">
+            <div class="progressbar">
+							<span class="indicator"></span>
+						</div>
+						<span class="progress-text"></span>
+				</div>
+      </div>
+    </main>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
