@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Textarea character count</title>
+
+		<style>
+			body {
+				font-family: sans-serif;
+			}
+
+			.field {
+				max-width: 600px;
+			}
+
+			label {
+				display: block;
+				font-size: 1.2em;
+				font-weight: bold;
+				margin-bottom: 0.25em;
+			}
+
+			textarea {
+				display: block;
+				box-sizing: border-box;
+				width: 100%;
+				border: 1px solid #333;
+				border-radius: 4px;
+				padding: 0.5em;
+				font-size: 1.2em;
+				font-family: sans-serif;
+			}
+
+			.count {
+				display: block;
+				margin: 0.5em 0;
+				font-size: 0.9em;
+			}
+
+			.error {
+				color: #bc2f32;
+			}
+		</style>
+  </head>
+  <body>
+    <main>
+			<div class="file-loader">
+				<h1>Character counter</h1>
+				<label for="compose">Send message</label>
+
+				<div class="field">
+					<textarea id="compose" rows="5"></textarea>
+					<span class="count" aria-live="assertive">0/140</span>
+				</div>
+      </div>
+    </main>
+
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
+</html>

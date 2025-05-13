@@ -1,4 +1,4 @@
-// import { notify } from '../notify.js';
+import { notify } from '../notify.js';
 
 const maxCount = 42;
 let fileCount = 0
@@ -13,7 +13,7 @@ const downloadButton = document.querySelector('.download');
 const updateFiles = (numFiles) => {
 	fileCount = numFiles;
 	updateLoader(numFiles);
-	// notify(`There have been ${numFiles} files downloaded`);
+	notify(`There have been ${numFiles} files downloaded`);
 
 	if (numFiles < maxCount) {
 		loadingTimeout = setTimeout(() => {
@@ -22,14 +22,13 @@ const updateFiles = (numFiles) => {
 	} else {
 		clearTimeout(loadingTimeout);
 		loadingTimeout = null;
-		// notify('All files have been downloaded');
+		notify('All files have been downloaded');
 		removeLoader();
 	}
 };
 
 const updateLoader = (numFiles) => {
 	loading = true;
-	console.log(numFiles, 'files. width:', numFiles * 100 / maxCount);
 	progressIndicator.style.width = `${numFiles * 100 / maxCount}%`;
 	progressText.innerText = `There have been ${numFiles} files downloaded`;
 	progressWrapper.classList.add('loading');

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form errors</title>
+
+		<style>
+			body {
+				font-family: sans-serif;
+			}
+
+			form {
+				max-width: 600px;
+				margin: 2em 1em;
+				padding: 1.5em;
+				border: 1px solid #ccc;
+				border-radius: 10px;
+			}
+
+			form h1 {
+				font-size: 2em;
+				margin: 0 0 0.5em;
+			}
+
+			.field {
+				margin: 0 0 1.5em;
+			}
+
+			label {
+				display: block;
+				font-size: 1.2em;
+				font-weight: bold;
+				margin-bottom: 0.25em;
+			}
+
+			input {
+				display: block;
+				box-sizing: border-box;
+				width: 100%;
+				border: 1px solid #333;
+				border-radius: 4px;
+				padding: 0.5em;
+				font-size: 1.2em;
+			}
+
+			input[aria-invalid="true"] {
+				border-color: #bc2f32;
+			}
+
+			.error {
+				color: #bc2f32;
+				font-size: 0.9em;
+			}
+		</style>
+  </head>
+  <body>
+    <main>
+			<form novalidate>
+				<h1>Shipping Information</h1>
+        <div class="field">
+					<label for="name">Name</label>
+					<input id="name" type="text">
+				</div>
+				<div class="field">
+					<label for="address">Street Address</label>
+					<input id="address" type="text">
+				</div>
+				<div class="field">
+					<label for="city">City</label>
+					<input id="city" type="text">
+				</div>
+      </form>
+    </main>
+
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
+</html>
